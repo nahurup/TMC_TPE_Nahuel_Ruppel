@@ -25,8 +25,8 @@ print("Despues de {0} pruebas y {1} paquetes en cada una, hubo {2} perdidos y {3
 promedioperdidos = perdidos / pruebas
 promedionoperdidos = noperdidos / pruebas
 
-""" 1 """
 print("1) Hubo un promedio de {0} paquetes perdidos y {1} no perdidos calculado entre {2} pruebas".format(promedioperdidos, promedionoperdidos, pruebas))
+print("")
 perdidos = 0
 noperdidos = 0
 
@@ -48,3 +48,71 @@ for i in range(0,pruebas):
     while i < numpaquetes:
      probar_probabilidadA()
      i += 1
+
+print("Despues de {0} pruebas y {1} paquetes en cada una, hubo {2} perdidos y {3} no perdidos".format(pruebas, numpaquetes,perdidos,noperdidos))
+
+promedioperdidos = perdidos / pruebas
+promedionoperdidos = noperdidos / pruebas
+
+print("2) a) Hubo un promedio de {0} paquetes perdidos y {1} no perdidos calculado entre {2} pruebas".format(promedioperdidos, promedionoperdidos, pruebas))
+print("")
+perdidos = 0
+noperdidos = 0
+
+def probar_probabilidadB():
+
+   global noperdidos
+   global perdidos
+
+   if random.randint(1,100) < probabilidadB:
+
+       perdidos += 1
+
+   else:
+
+      noperdidos += 1
+
+
+for i in range(0,pruebas):
+    while i < numpaquetes:
+     probar_probabilidadB()
+     i += 1
+
+print("Despues de {0} pruebas y {1} paquetes en cada una, hubo {2} perdidos y {3} no perdidos".format(pruebas, numpaquetes,perdidos,noperdidos))
+
+promedioperdidos = perdidos / pruebas
+promedionoperdidos = noperdidos / pruebas
+
+print("2) b) Hubo un promedio de {0} paquetes perdidos y {1} no perdidos calculado entre {2} pruebas".format(promedioperdidos, promedionoperdidos, pruebas))
+print("")
+perdidos = 0
+noperdidos = 0
+
+def probar_probabilidadC():
+
+   global noperdidos
+   global perdidos
+
+   if random.randint(1,100) < probabilidadC:
+
+       perdidos += 1
+
+   else:
+
+      noperdidos += 1
+
+
+for i in range(0,pruebas):
+    while i < numpaquetes:
+     probar_probabilidadC()
+     i += 1
+
+print("Despues de {0} pruebas y {1} paquetes en cada una, hubo {2} perdidos y {3} no perdidos".format(pruebas, numpaquetes,perdidos,noperdidos))
+
+promedioperdidos = perdidos / pruebas
+promedionoperdidos = noperdidos / pruebas
+
+print("2) c) Hubo un promedio de {0} paquetes perdidos y {1} no perdidos calculado entre {2} pruebas".format(promedioperdidos, promedionoperdidos, pruebas))
+print("")
+perdidos = 0
+noperdidos = 0
