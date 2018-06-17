@@ -1,37 +1,50 @@
 import random
+from variables import *
 
-perdidos = 0
-noperdidos = 0
-i = 0
-
-viajes = 10
-numpaquetes = 300
-probabilidad = 12
-
-def probar_probabilidad():
+def probar_probabilidad1():
 
    global noperdidos
    global perdidos
 
    if random.randint(1,100) < probabilidad:
 
-      print("Perdido")
-      perdidos += 1
+       perdidos += 1
 
    else:
 
-      print("No perdido")
       noperdidos += 1
 
 
-for i in range(0,viajes):
+for i in range(0,pruebas):
     while i < numpaquetes:
-     probar_probabilidad()
+     probar_probabilidad1()
      i += 1
 
-print("Despues de {0} viajes y {1} paquetes en cada uno, hubo {2} perdidos y {3} no perdidos".format(viajes, numpaquetes,perdidos,noperdidos))
+print("Despues de {0} pruebas y {1} paquetes en cada una, hubo {2} perdidos y {3} no perdidos".format(pruebas, numpaquetes,perdidos,noperdidos))
 
-promedioperdidos = perdidos / viajes
-promedionoperdidos = noperdidos / viajes
+promedioperdidos = perdidos / pruebas
+promedionoperdidos = noperdidos / pruebas
 
-print("Hubo un promedio de {0} paquetes perdidos y {1} no perdidos por mes en {2} viajes".format(promedioperdidos, promedionoperdidos, viajes))
+""" 1 """
+print("1) Hubo un promedio de {0} paquetes perdidos y {1} no perdidos calculado entre {2} pruebas".format(promedioperdidos, promedionoperdidos, pruebas))
+perdidos = 0
+noperdidos = 0
+
+def probar_probabilidadA():
+
+   global noperdidos
+   global perdidos
+
+   if random.randint(1,100) < probabilidadA:
+
+       perdidos += 1
+
+   else:
+
+      noperdidos += 1
+
+
+for i in range(0,pruebas):
+    while i < numpaquetes:
+     probar_probabilidadA()
+     i += 1
