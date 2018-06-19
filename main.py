@@ -107,7 +107,17 @@ maxABC.append(max(perdidosB))
 maxABC.append(max(perdidosC))
 
 print(maxABC)
-    
+
+probC = 0,1
+
+while abs(probC - p_anterior) > epsilon1 or pruebas10 < 10:
+    while i < numpaquetes:
+        probar_probabilidadC()
+        i+=1
+    probC= perdidos / noperdidos
+    p_anterior = probC
+
+print(probC)
 
 
 
