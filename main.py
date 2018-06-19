@@ -1,4 +1,5 @@
 import random
+import numpy as np
 from variables import *
 
 def probar_probabilidad1():
@@ -15,17 +16,17 @@ def probar_probabilidad1():
       noperdidos += 1
 
 
-for i in range(0,pruebas):
+for i in range(0,pruebas10):
     while i < numpaquetes:
      probar_probabilidad1()
      i += 1
 
-print("Despues de {0} pruebas y {1} paquetes en cada una, hubo {2} perdidos y {3} no perdidos".format(pruebas, numpaquetes,perdidos,noperdidos))
+print("Despues de {0} pruebas y {1} paquetes en cada una, hubo {2} perdidos y {3} no perdidos".format(pruebas10, numpaquetes,perdidos,noperdidos))
 
-promedioperdidos = perdidos / pruebas
-promedionoperdidos = noperdidos / pruebas
+promedioperdidos = perdidos / pruebas10
+promedionoperdidos = noperdidos / pruebas10
 
-print("1) Hubo un promedio de {0} paquetes perdidos y {1} no perdidos calculado entre {2} pruebas".format(promedioperdidos, promedionoperdidos, pruebas))
+print("1) Hubo un promedio de {0} paquetes perdidos y {1} no perdidos calculado entre {2} pruebas".format(promedioperdidos, promedionoperdidos, pruebas10))
 print("")
 perdidos = 0
 noperdidos = 0
@@ -44,20 +45,14 @@ def probar_probabilidadA():
       noperdidos += 1
 
 
-for i in range(0,pruebas):
+for i in range(0,pruebas10):
     while i < numpaquetes:
      probar_probabilidadA()
      i += 1
+    perdidosA.append(perdidos)
+    perdidos = 0
 
-print("Despues de {0} pruebas y {1} paquetes en cada una, hubo {2} perdidos y {3} no perdidos".format(pruebas, numpaquetes,perdidos,noperdidos))
 
-promedioperdidos = perdidos / pruebas
-promedionoperdidos = noperdidos / pruebas
-
-print("2) a) Hubo un promedio de {0} paquetes perdidos y {1} no perdidos calculado entre {2} pruebas".format(promedioperdidos, promedionoperdidos, pruebas))
-print("")
-perdidos = 0
-noperdidos = 0
 
 def probar_probabilidadB():
 
@@ -73,20 +68,14 @@ def probar_probabilidadB():
       noperdidos += 1
 
 
-for i in range(0,pruebas):
+for i in range(0,pruebas15):
     while i < numpaquetes:
      probar_probabilidadB()
      i += 1
+    perdidosB.append(perdidos)
+    perdidos = 0
 
-print("Despues de {0} pruebas y {1} paquetes en cada una, hubo {2} perdidos y {3} no perdidos".format(pruebas, numpaquetes,perdidos,noperdidos))
 
-promedioperdidos = perdidos / pruebas
-promedionoperdidos = noperdidos / pruebas
-
-print("2) b) Hubo un promedio de {0} paquetes perdidos y {1} no perdidos calculado entre {2} pruebas".format(promedioperdidos, promedionoperdidos, pruebas))
-print("")
-perdidos = 0
-noperdidos = 0
 
 def probar_probabilidadC():
 
@@ -102,17 +91,23 @@ def probar_probabilidadC():
       noperdidos += 1
 
 
-for i in range(0,pruebas):
+for i in range(0,pruebas15):
     while i < numpaquetes:
      probar_probabilidadC()
      i += 1
+    perdidosC.append(perdidos)
+    perdidos = 0
 
-print("Despues de {0} pruebas y {1} paquetes en cada una, hubo {2} perdidos y {3} no perdidos".format(pruebas, numpaquetes,perdidos,noperdidos))
+print(perdidosA)
+print(perdidosB)
+print(perdidosC)
 
-promedioperdidos = perdidos / pruebas
-promedionoperdidos = noperdidos / pruebas
+maxABC.append(max(perdidosA))
+maxABC.append(max(perdidosB))
+maxABC.append(max(perdidosC))
 
-print("2) c) Hubo un promedio de {0} paquetes perdidos y {1} no perdidos calculado entre {2} pruebas".format(promedioperdidos, promedionoperdidos, pruebas))
-print("")
-perdidos = 0
-noperdidos = 0
+print(maxABC)
+    
+
+
+
